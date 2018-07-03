@@ -1,6 +1,9 @@
 library(readr)
 library(lubridate)
 
+# make sure that weekdays are presented in English
+Sys.setlocale("LC_TIME", "C")
+
 if(!file.exists("./household_power_consumption.txt")){
         url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
         
